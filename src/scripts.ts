@@ -467,9 +467,27 @@ console.log(getLongestString(['I', 'need', 'candy']))  // 'candy'
 //It should return true if all elements in the array are equal
 //It should return false otherwise
 
+function equalStr(a: any) {  
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== a[0]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(equalStr([true, true, true, true]))  // true 
+console.log(equalStr(['test', 'test', 'test']))  // true 
+console.log(equalStr([1,1,1,2]))  // false 
+console.log(equalStr(['10',10,10,10]))  // false
+
 //Task 37
 //Write a function that takes arguments an arbitrary number of arrays
 //It should return an array containing the values of all arrays
+
+//console.log(myFunction([1, 2, 3], [4, 5, 6]))  // [1, 2, 3, 4, 5, 6]
+//console.log(myFunction(['a', 'b', 'c'], [4, 5, 6]))  // ['a', 'b', 'c', 4, 5, 6]
+//console.log(myFunction([true, true], [1, 2], ['a', 'b']))  // [true, true, 1, 2, 'a', 'b']
 
 //Task 38
 //Write a function that takes an array of objects as argument
